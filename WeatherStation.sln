@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherStation.Backend", "WeatherStation.Backend\WeatherStation.Backend.csproj", "{0298C3CA-F921-4A56-8CCE-BFB769692BEA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D5D41D2A-80DC-49F0-AF2D-9E0FB6953D97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "src\App\App.csproj", "{EFEDA63F-12BD-489A-A8B1-D64912A11FC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +10,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0298C3CA-F921-4A56-8CCE-BFB769692BEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0298C3CA-F921-4A56-8CCE-BFB769692BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0298C3CA-F921-4A56-8CCE-BFB769692BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0298C3CA-F921-4A56-8CCE-BFB769692BEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFEDA63F-12BD-489A-A8B1-D64912A11FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFEDA63F-12BD-489A-A8B1-D64912A11FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFEDA63F-12BD-489A-A8B1-D64912A11FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFEDA63F-12BD-489A-A8B1-D64912A11FC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EFEDA63F-12BD-489A-A8B1-D64912A11FC7} = {D5D41D2A-80DC-49F0-AF2D-9E0FB6953D97}
 	EndGlobalSection
 EndGlobal
