@@ -15,8 +15,8 @@ public interface IWeatherService
     /// <param name="cancellationToken">Токен отмены</param>
     /// <returns>Ответ с текущей погодой</returns>
     Task<CurrentWeatherResponse> GetCurrentWeatherAsync(
-        double lat,
-        double lon,
+        decimal lat,
+        decimal lon,
         CancellationToken cancellationToken = default);
 
     /// <summary>
@@ -24,12 +24,12 @@ public interface IWeatherService
     /// </summary>
     /// <param name="lat">Широта</param>
     /// <param name="lon">Долгота</param>
-    /// <param name="days">Количество дней (максимум 3)</param>
+    /// <param name="days"> Количество дней (от 1 до 14)</param>
     /// <param name="cancellationToken">Токен отмены</param>
     /// <returns>Ответ с прогнозом</returns>
     Task<ForecastWeatherResponse> GetForecastAsync(
-        double lat,
-        double lon,
+        decimal lat,
+        decimal lon,
         int days,
         CancellationToken cancellationToken = default);
 }

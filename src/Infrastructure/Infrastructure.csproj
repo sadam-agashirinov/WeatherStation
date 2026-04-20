@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\App\App.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="IO.Swagger">
+        <HintPath>..\..\WeatherApiDll\IO.Swagger.dll</HintPath>
+      </Reference>
+      <Reference Include="JsonSubTypes">
+        <HintPath>..\..\WeatherApiDll\JsonSubTypes.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+        <HintPath>C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\8.0.25\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.Extensions.Options">
+        <HintPath>C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\8.0.25\Microsoft.Extensions.Options.dll</HintPath>
+      </Reference>
+      <Reference Include="Newtonsoft.Json">
+        <HintPath>..\..\WeatherApiDll\Newtonsoft.Json.dll</HintPath>
+      </Reference>
+      <Reference Include="RestSharp">
+        <HintPath>..\..\WeatherApiDll\RestSharp.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.Security.Permissions" Version="10.0.6" />
+    </ItemGroup>
+
+</Project>
