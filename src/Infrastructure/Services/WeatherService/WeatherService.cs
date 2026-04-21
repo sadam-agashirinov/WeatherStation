@@ -17,7 +17,7 @@ public class WeatherService : IWeatherService
     public WeatherService(IOptions<WeatherServiceOptions> options)
     {
         _apiWeather = new APIsApi();
-        _apiWeather.Configuration.ApiKey.Add("key", options.Value.ApiKey);
+        _apiWeather.Configuration.ApiKey.TryAdd("key", options.Value.ApiKey);
     }
     
     /// <inheritdoc/>
@@ -39,13 +39,13 @@ public class WeatherService : IWeatherService
         int days,
         CancellationToken cancellationToken = default)
     {
-        if (days is >= 1 and <= 14) 
+        if (days is < 1 or > 14) 
             throw new ArgumentOutOfRangeException($"{nameof(days)} должен быть от 1-14.");
 
         if (!GeoHelper.IsValidCoordinates(lat, lon))
             throw new ArgumentException("Неверные координаты.");
         
-        var forecastWeather = await _apiWeather.ForecastWeatherAsync($"{lat},{lon}", days);
+        var forecastWeather = await _apiWeather.ForecastWeatherAsync($"{lat},{lon}", days, lang: "ru");
 
         return new ForecastWeatherResponse();
     }
