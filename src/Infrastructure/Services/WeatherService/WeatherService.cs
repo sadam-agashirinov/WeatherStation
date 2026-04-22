@@ -1,9 +1,11 @@
 ﻿using App.DTOs.Responses.WeatherService;
 using App.Services.Interfaces;
+using Infrastructure.Extensions;
 using Infrastructure.Helpers;
 using Infrastructure.Services.WeatherService.Options;
 using IO.Swagger.Api;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json.Linq;
 
 namespace Infrastructure.Services.WeatherService;
 
@@ -13,7 +15,7 @@ namespace Infrastructure.Services.WeatherService;
 public class WeatherService : IWeatherService
 {
     private readonly APIsApi _apiWeather;
-    
+
     public WeatherService(IOptions<WeatherServiceOptions> options)
     {
         _apiWeather = new APIsApi();
@@ -28,9 +30,15 @@ public class WeatherService : IWeatherService
         if (!GeoHelper.IsValidCoordinates(lat, lon))
             throw new ArgumentException("Неверные координаты.");
         
-        var realTimeWeather = await _apiWeather.RealtimeWeatherAsync($"{lat},{lon}", "ru");
+        var realTimeWeatherResponse = (JObject)await _apiWeather.RealtimeWeatherAsync($"{lat},{lon}", "ru");
+        
+        var response = new CurrentWeatherResponse()
+        {
+            Location = ApiWeatherHelper.GetLocation(realTimeWeatherResponse).CreateDto(),
+            Current = ApiWeatherHelper.GetCurrent(realTimeWeatherResponse).CreateDto()
+        };
 
-        return new CurrentWeatherResponse();
+        return response;
     }
 
     /// <inheritdoc/>
@@ -45,8 +53,15 @@ public class WeatherService : IWeatherService
         if (!GeoHelper.IsValidCoordinates(lat, lon))
             throw new ArgumentException("Неверные координаты.");
         
-        var forecastWeather = await _apiWeather.ForecastWeatherAsync($"{lat},{lon}", days, lang: "ru");
+        var forecastWeatherResponse = (JObject)await _apiWeather.ForecastWeatherAsync($"{lat},{lon}", days, lang: "ru");
+        
+        var response = new ForecastWeatherResponse()
+        {
+            Location = ApiWeatherHelper.GetLocation(forecastWeatherResponse).CreateDto(),
+            Current = ApiWeatherHelper.GetCurrent(forecastWeatherResponse).CreateDto(),
+            Forecast = ApiWeatherHelper.GetForecast(forecastWeatherResponse).CreateDto()
+        };
 
-        return new ForecastWeatherResponse();
+        return response;
     }
 }

@@ -8,70 +8,65 @@ public class ForecastDailyWeather
     /// <summary>
     ///Максимальная температура в градусах Цельсия
     ///</summary>
-    public double MaxtempC { get; private set; }
+    public decimal? MaxtempC { get; set; }
 
     /// <summary>
     ///Минимальная температура в градусах Цельсия
     ///</summary>
-    public double MintempC { get; private set; }
+    public decimal? MintempC { get; set; }
 
     /// <summary>
     ///Средняя температура в градусах Цельсия
     ///</summary>
-    public double AvgtempC { get; private set; }
+    public decimal? AvgtempC { get; set; }
 
     /// <summary>
     ///Максимальная скорость ветра в километрах в час
     ///</summary>
-    public double MaxwindKph { get; private set; }
+    public decimal? MaxwindKph { get; set; }
 
     /// <summary>
     ///Общее количество осадков в миллиметрах
     ///</summary>
-    public double TotalprecipMm { get; private set; }
-
-    /// <summary>
-    ///Общее количество снега в сантиметрах
-    ///</summary>
-    public double TotalsnowCm { get; private set; }
+    public decimal? TotalprecipMm { get; set; }
 
     /// <summary>
     ///Средняя видимость в километрах
     ///</summary>
-    public double AvgvisKm { get; private set; }
+    public decimal? AvgvisKm { get; set; }
 
     /// <summary>
     ///Средняя относительная влажность в процентах
     ///</summary>
-    public int Avghumidity { get; private set; }
+    public decimal? Avghumidity { get; set; }
 
     /// <summary>
     ///Будет ли дождь в течение дня
     ///</summary>
-    public bool DailyWillItRain { get; private set; }
+    public bool WillItRain { get; set; }
 
     /// <summary>
     ///Вероятность дождя в процентах
     ///</summary>
-    public int DailyChanceOfRain { get; private set; }
+    public decimal? ChanceOfRain { get; set; }
 
     /// <summary>
     ///Будет ли снег в течение дня
     ///</summary>
-    public bool DailyWillItSnow { get; private set; }
+    public bool WillItSnow { get; set; }
 
     /// <summary>
     ///Вероятность снега в процентах
     ///</summary>
-    public int DailyChanceOfSnow { get; private set; }
+    public decimal? ChanceOfSnow { get; set; }
 
     /// <summary>
     ///Условия погоды (текст, иконка, код)
     ///</summary>
-    public Condition Condition { get; private set; }
+    public Condition Condition { get; set; }
 
     /// <summary>
     ///Ультрафиолетовый индекс
     ///</summary>
-    public double Uv { get; private set; }
+    public int? Uv { get; set; }
 }

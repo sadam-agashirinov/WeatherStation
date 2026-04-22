@@ -8,100 +8,95 @@ public class ForecastDailyHourWeather
     /// <summary>
     /// Дата и время
     ///</summary>
-    public DateTime DateTime { get; private set; }
+    public DateTime DateTime { get; set; }
 
     /// <summary>
     /// Температура в градусах Цельсия
     /// </summary>
-    public double TempC { get; private set; }
+    public decimal? TempC { get; set; }
 
     /// <summary>
     /// Индикатор дневного времени
     /// </summary>
-    public bool IsDay { get; private set; }
+    public bool IsDay { get; set; }
 
     /// <summary>
     /// Состояние погоды (текст, иконка, код)
     /// </summary>
-    public Condition Condition { get; private set; }
+    public Condition Condition { get; set; }
 
     /// <summary>
     /// Скорость ветра в километрах в час
     /// </summary>
-    public double WindKph { get; private set; }
+    public decimal? WindKph { get; set; }
 
     /// <summary>
     /// Направление ветра в виде строки (например, "NNE")
     /// </summary>
-    public string WindDir { get; private set; }
+    public string WindDir { get; set; }
 
     /// <summary>
     /// Давление в миллибарах
     /// </summary>
-    public double PressureMb { get; private set; }
+    public decimal? PressureMb { get; set; }
 
     /// <summary>
     /// Давление в дюймах ртутного столба
     /// </summary>
-    public double PressureIn { get; private set; }
+    public decimal? PressureIn { get; set; }
 
     /// <summary>
     /// Количество осадков в миллиметрах
     /// </summary>
-    public double PrecipMm { get; private set; }
-
-    /// <summary>
-    /// Количество снега в сантиметрах
-    /// </summary>
-    public double SnowCm { get; private set; }
+    public decimal? PrecipMm { get; set; }
 
     /// <summary>
     /// Относительная влажность в процентах
     /// </summary>
-    public int Humidity { get; private set; }
+    public decimal? Humidity { get; set; }
 
     /// <summary>
     /// Облачность в процентах
     /// </summary>
-    public int Cloud { get; private set; }
+    public decimal? Cloud { get; set; }
 
     /// <summary>
     /// Ощущаемая температура в градусах Цельсия
     /// </summary>
-    public double FeelslikeC { get; private set; }
-    
+    public decimal? FeelslikeC { get; set; }
+
     /// <summary>
     /// Будет ли дождь
     /// </summary>
-    public bool WillItRain { get; private set; }
+    public bool WillItRain { get; set; }
 
     /// <summary>
     /// Вероятность дождя в процентах
     /// </summary>
-    public int ChanceOfRain { get; private set; }
+    public decimal? ChanceOfRain { get; set; }
 
     /// <summary>
     /// Будет ли снег
     /// </summary>
-    public bool WillItSnow { get; private set; }
+    public bool WillItSnow { get; set; }
 
     /// <summary>
     /// Вероятность снега в процентах
     /// </summary>
-    public int ChanceOfSnow { get; private set; }
+    public decimal? ChanceOfSnow { get; set; }
 
     /// <summary>
     /// Видимость в километрах
     /// </summary>
-    public double VisibleKm { get; private set; }
+    public decimal? VisibleKm { get; set; }
 
     /// <summary>
     /// Порыв ветра в километрах в час
     /// </summary>
-    public double GustKph { get; private set; }
+    public decimal? GustKph { get; set; }
 
     /// <summary>
     /// Ультрафиолетовый индекс
     /// </summary>
-    public int Uv { get; private set; }
+    public int? Uv { get; set; }
 }

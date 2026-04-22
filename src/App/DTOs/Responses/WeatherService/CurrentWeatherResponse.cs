@@ -8,10 +8,10 @@ public class CurrentWeatherResponse
     /// <summary>
     /// Информация о местности 
     /// </summary>
-    public Location Location { get; private set; }
+    public Location Location { get; set; }
 
     /// <summary>
     /// Текущая погода
     /// </summary>
-    public CurrentWeather Current { get; private set; }
+    public CurrentWeather Current { get; set; }
 }

@@ -6,42 +6,32 @@
 public class Astro
 {
     /// <summary>
-    /// Время восхода солнца (например, "06:11 AM")
+    /// Время восхода солнца
     /// </summary>
-    public string Sunrise { get; private set; }
+    public string Sunrise { get; set; }
 
     /// <summary>
-    /// Время заката солнца (например, "06:59 PM")
+    /// Время заката солнца
     /// </summary>
-    public string Sunset { get; private set; }
+    public string Sunset { get; set; }
 
     /// <summary>
-    /// Время восхода луны (например, "12:57 PM")
+    /// Время восхода луны
     /// </summary>
-    public string Moonrise { get; private set; }
+    public string Moonrise { get; set; }
 
     /// <summary>
-    /// Время захода луны (например, "05:05 AM")
+    /// Время захода луны
     /// </summary>
-    public string Moonset { get; private set; }
+    public string Moonset { get; set; }
 
     /// <summary>
-    /// Фаза луны (например, "Waxing Gibbous")
+    /// Фаза луны
     /// </summary>
-    public string MoonPhase { get; private set; }
+    public string MoonPhase { get; set; }
 
     /// <summary>
     /// Освещённость луны в процентах (0–100)
     /// </summary>
-    public int MoonIllumination { get; private set; }
-
-    /// <summary>
-    /// Индикатор того, находится ли луна над горизонтом
-    /// </summary>
-    public bool IsMoonUp { get; private set; }
-
-    /// <summary>
-    /// Индикатор того, находится ли солнце над горизонтом
-    /// </summary>
-    public bool IsSunUp { get; private set; }
+    public int MoonIllumination { get; set; }
 }

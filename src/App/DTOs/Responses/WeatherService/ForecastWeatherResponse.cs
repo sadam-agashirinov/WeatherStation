@@ -8,15 +8,15 @@ public class ForecastWeatherResponse
     /// <summary>
     /// Информация о местности 
     /// </summary>
-    public Location Location { get; private set; }
+    public Location Location { get; set; }
 
     /// <summary>
     /// Текущая погода
     /// </summary>
-    public CurrentWeather Current { get; private set; }
+    public CurrentWeather Current { get; set; }
 
     /// <summary>
     /// Прогноз погоды по дням
     /// </summary>
-    public IEnumerable<ForecastWeather> Days { get; private set; }
+    public IEnumerable<ForecastDayWeather> Forecast { get; set; }
 }

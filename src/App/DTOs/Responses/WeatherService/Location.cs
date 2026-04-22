@@ -8,25 +8,25 @@ public class Location
     /// <summary>
     /// Наименование
     /// </summary>
-    public string Name { get; private set; }
+    public string Name { get; set; }
 
     /// <summary>
     /// Регион
     /// </summary>
-    public string Region { get; private set; }
+    public string Region { get; set; }
 
     /// <summary>
     /// Страна
     /// </summary>
-    public string Country { get; private set; }
+    public string Country { get; set; }
 
     /// <summary>
     /// Широта
     /// </summary>
-    public decimal Latitude { get; private set; }
+    public decimal? Latitude { get; set; }
 
     /// <summary>
     /// Долгота
     /// </summary>
-    public decimal Longitude { get; private set; }
+    public decimal? Longitude { get; set; }
 }

@@ -6,7 +6,7 @@
 public class Condition
 {
     /// <summary>
-    ///Текстовое описание погоды (например, "Fog")
+    ///Текстовое описание погоды
     ///</summary>
     public string Text { get; set; }
 
@@ -18,5 +18,5 @@ public class Condition
     /// <summary>
     ///Числовой код погодного условия
     ///</summary>
-    public int Code { get; set; }
+    public int? Code { get; set; }
 }
